@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Checklist completo do Beta
+    url: https://github.com/gabrielinacioluz-ui/manuscrito-releases/blob/main/BETA_CHECKLIST.md
+    about: Use o checklist para uma rodada completa de testes antes de relatar problemas individuais.
