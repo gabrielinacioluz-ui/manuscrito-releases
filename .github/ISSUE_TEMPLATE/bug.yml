@@ -1,0 +1,142 @@
+name: Relatar bug do Beta
+description: Registre um problema encontrado durante os testes do Manuscrito.
+title: "[Bug] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por testar o Manuscrito. Não anexe manuscritos pessoais ou arquivos confidenciais. Use um projeto de teste sempre que possível.
+
+  - type: input
+    id: version
+    attributes:
+      label: Versão do Manuscrito
+      description: Informe a versão exibida no aplicativo ou o nome da Release.
+      placeholder: "1.0.0 — Beta 1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Sistema operacional
+      options:
+        - Windows 10
+        - Windows 11
+        - macOS — Apple Silicon
+        - macOS — Intel
+        - Linux — Debian/Ubuntu ou derivado
+        - Outro
+    validations:
+      required: true
+
+  - type: input
+    id: osversion
+    attributes:
+      label: Versão do sistema
+      placeholder: "Ex.: Windows 11 24H2, macOS 26, Ubuntu 24.04"
+    validations:
+      required: true
+
+  - type: input
+    id: hardware
+    attributes:
+      label: Processador / arquitetura
+      placeholder: "Ex.: Intel x64, AMD x64, Apple M3"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área afetada
+      options:
+        - Instalação / primeira abertura
+        - Projetos / presets
+        - Editor
+        - Formatação de texto
+        - Roteiro audiovisual
+        - Dramaturgia
+        - HQ / Quadrinhos
+        - Poesia
+        - Corretor / dicionário
+        - Persistência
+        - Tema / interface
+        - Exportação DOCX
+        - Exportação PDF
+        - Exportação EPUB
+        - Desinstalação
+        - Outra
+    validations:
+      required: true
+
+  - type: textarea
+    id: doing
+    attributes:
+      label: O que você estava fazendo?
+      description: Descreva o contexto imediatamente anterior ao problema.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para reproduzir
+      description: Liste os passos desde a abertura do Manuscrito até o erro.
+      placeholder: |
+        1. Criei um projeto...
+        2. Abri...
+        3. Cliquei...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Resultado obtido
+    validations:
+      required: true
+
+  - type: dropdown
+    id: repeat
+    attributes:
+      label: O problema acontece novamente?
+      options:
+        - Sim, sempre
+        - Sim, às vezes
+        - Não consegui repetir
+        - Não testei novamente
+    validations:
+      required: true
+
+  - type: textarea
+    id: error
+    attributes:
+      label: Mensagem de erro
+      description: Cole a mensagem completa. Se não houver, escreva "Nenhuma".
+    validations:
+      required: true
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Prints, vídeo ou informações adicionais
+      description: Arraste imagens para este campo ou acrescente informações que ajudem a reproduzir o problema.
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Confirmações
+      options:
+        - label: Não incluí manuscritos pessoais, dados confidenciais ou outras informações privadas neste relatório.
+          required: true
+        - label: Verifiquei se consigo reproduzir o problema ou informei acima que não consegui repetir.
+          required: true
