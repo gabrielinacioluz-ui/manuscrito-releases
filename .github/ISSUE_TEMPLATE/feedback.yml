@@ -1,0 +1,54 @@
+name: Feedback do Beta
+description: Envie uma avaliação de uso que não seja um bug específico.
+title: "[Feedback] "
+labels: []
+body:
+  - type: dropdown
+    id: os
+    attributes:
+      label: Plataforma testada
+      options:
+        - Windows x64
+        - macOS Apple Silicon
+        - macOS Intel
+        - Linux x64 (.deb)
+    validations:
+      required: true
+  - type: textarea
+    id: tested
+    attributes:
+      label: O que você testou?
+      description: Cite os perfis, ferramentas e exportações que utilizou.
+    validations:
+      required: true
+  - type: dropdown
+    id: rating
+    attributes:
+      label: Avaliação geral
+      options:
+        - "5 — Muito bom"
+        - "4 — Bom"
+        - "3 — Regular"
+        - "2 — Ruim"
+        - "1 — Muito ruim"
+    validations:
+      required: true
+  - type: textarea
+    id: good
+    attributes:
+      label: O que funcionou melhor?
+  - type: textarea
+    id: improve
+    attributes:
+      label: O que deveria melhorar?
+  - type: textarea
+    id: missing
+    attributes:
+      label: Sentiu falta de alguma função ou informação?
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacidade
+      options:
+        - label: Não incluí manuscritos pessoais ou informações confidenciais neste feedback.
+          required: true
